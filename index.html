@@ -86,8 +86,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#技术栈——Storm集群</p>
-<p>##准备工作<br>目前申请了3台虚拟机，准备搭建一个storm集群。三台机器的内网IP及机器名分别为：</p>
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>目前申请了3台虚拟机，准备搭建一个storm集群。三台机器的内网IP及机器名分别为：</p>
 <ul>
 <li>10.5.234.216 banma01</li>
 <li>10.5.232.64 banma01-1</li>
@@ -105,7 +104,7 @@
 <li>IP地址不方便记忆，修改/etc/hosts，用机器名登录</li>
 </ul>
 <p>准备以banma01作为storm的nimbus节点，banma01-1、banma01-2作为supervisor节点。</p>
-<p>##zookeeper<br>三台机器同时作为zookeeper集群。将conf/zoo_sample.cfg重命名为conf/zoo.cfg，并修改配置项。</p>
+<h2 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h2><p>三台机器同时作为zookeeper集群。将conf/zoo_sample.cfg重命名为conf/zoo.cfg，并修改配置项。</p>
 <pre><code>tickTime=2000
 initLimit=10
 syncLimit=5
@@ -114,8 +113,7 @@ clientPort=2181
 server.1=10.5.234.216:2888:3888
 server.2=10.5.232.64:2888:3888
 server.3=10.5.233.195:2888:3888
-</code></pre><p>##Storm</p>
-<p>搭建storm机器，配置storm.yaml如下：</p>
+</code></pre><h2 id="Storm"><a href="#Storm" class="headerlink" title="Storm"></a>Storm</h2><p>搭建storm机器，配置storm.yaml如下：</p>
 <pre><code>storm.zookeeper.servers:
   - &quot;10.5.234.216&quot;
   - &quot;10.5.232.64&quot;
@@ -135,7 +133,7 @@ ui.port: 8999
 <pre><code>$ echo 2 &gt;/var/zookeeper/myid
 </code></pre><p>banma01-2中执行 </p>
 <pre><code>$ echo 3 &gt;/var/zookeeper/myid
-</code></pre><p>##启动<br>通过以上配置，zookeeper和storm集群就搭建好了。启动时，首先在3台服务器上启动zk</p>
+</code></pre><h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>通过以上配置，zookeeper和storm集群就搭建好了。启动时，首先在3台服务器上启动zk</p>
 <pre><code>$./zkServer start
 </code></pre><p>在banma01上启动nimbus，banma01-1和banma01-2上启动supervisor，在banma01机器上启动storm ui服务，正常运行时如下所示。</p>
 <p><img src="http://o6fq80rkt.bkt.clouddn.com/storm_ui.jpg" height="400" alt="storm ui" align="center"></p>
