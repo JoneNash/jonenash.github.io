@@ -98,7 +98,7 @@
 <li>python 2.7.x</li>
 <li>polysh</li>
 </ul>
-<p>JDK、python是基础运行环境，不再赘述。polysh是一个交互式的多服务器运维工具，可以在单台机器上对一批服务器进行处理，运行交互式命令。另外一些提高生产力的小技巧：</p>
+<p>JDK、python是基础运行环境，不再赘述。polysh是一个交互式的多服务器运维工具，可以在单台机器上对一批服务器进行处理，运行交互式命令，这个工具安装在客户端就行了。另外一些提高生产力的小技巧：</p>
 <ul>
 <li>将本地机器的公钥（~/.ssh/id_rsa.pub）添加到被管理服务器,与服务器建立无密码访问（~/.ssh/authorized_keys）</li>
 <li>IP地址不方便记忆，修改/etc/hosts，用机器名登录</li>
@@ -137,8 +137,7 @@ ui.port: 8999
 <pre><code>$./zkServer start
 </code></pre><p>在banma01上启动nimbus，banma01-1和banma01-2上启动supervisor，在banma01机器上启动storm ui服务，正常运行时如下所示。</p>
 <p><img src="http://o6fq80rkt.bkt.clouddn.com/storm_ui.jpg" height="400" alt="storm ui" align="center"></p>
-<p>zookeeper和storm的配置参考了资料[1]。</p>
-<p>[1]<a href="http://chih.me/Setting-up-a-Storm-Cluster-in-3-machines.html" target="_blank" rel="external">http://chih.me/Setting-up-a-Storm-Cluster-in-3-machines.html</a></p>
+<p>至此，storm集群搭建完毕。</p>
 
       
     </div>
