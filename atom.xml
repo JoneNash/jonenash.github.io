@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2023-05-26T10:20:16.409Z</updated>
+  <updated>2023-05-26T09:42:43.902Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>first_blog</title>
-    <link href="http://yoursite.com/posts/cfc8.html"/>
-    <id>http://yoursite.com/posts/cfc8.html</id>
-    <published>2023-05-26T10:18:00.000Z</published>
-    <updated>2023-05-26T10:20:16.409Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;pic&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/loading.gif&quot; data-original=&quot;philly-magic-garden.jpg&quot; alt=&quot;这是图片&quot; title=&quot;Magic Gardens&quot;&gt;&lt;/p&gt;
-&lt;script&gt;
-       
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
