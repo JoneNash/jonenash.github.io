@@ -359,7 +359,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.6k
+                    3.7k
                 </div>
                 
 
@@ -400,8 +400,16 @@
 </ul>
 <p>各变种差异与应用场景按下不表，VRP基本过程可以概括为下图所示：输入仓库、点位、车辆信息，输出车辆与点位的服务关系及行驶路径。</p>
 <p><img src="/images/loading.gif" data-original="/posts/undefined/vrp_basic_info.png"></p>
-<p>The VRP is a combinatorial problem whose ground set is the edges of a graph ${G(V,E)}$. The notation used for this problem is as follows:</p>
-<p>${V = \left\lbrace v_{0}, v_{1}, …, v_{n} \right\rbrace}$ is a vertex set, where:<br>Consider a depot to be located at ${v_0}$.<br>Let ${V’ = V \backslash \left\lbrace v_{0} \right\rbrace}$ be used as the set of ${n}$ cities.<br>${A = \left\lbrace(v_{i},v_{j}) | v_{i},v_{j} \in V; i \neq j \right\rbrace}$ is an arc set.<br>${C}$ is a matrix of non-negative costs or distances ${c_{ij}}$ between customers ${v_{i}}$ and ${v_{j}}$.<br>${d}$ is a vector of the customer demands.<br>${R_{i}}$ is the route for vehicle ${i}$.<br>${m}$ is the number of vehicles (all identical). One route is assigned to each vehicle.</p>
+<p>VRP可以看做以图${G(V,E)}$为基础的组合优化问题。 相关符号定义如下:</p>
+<ul>
+<li>${V = \left\lbrace v_{0}, v_{1}, …, v_{n} \right\rbrace}$ 表示顶点集合（vertex set）,通常将仓库（depot）看做${v_0}$。</li>
+<li>将 ${V’ = V \backslash \left\lbrace v_{0} \right\rbrace}$ 看做需要访问的点位集合 ${n}$ 。</li>
+<li>${A = \left\lbrace(v_{i},v_{j}) | v_{i},v_{j} \in V; i \neq j \right\rbrace}$ 为边（arc）的集合。</li>
+<li>${C}$ 表示距离矩阵，其中 ${c_{ij}}$ 表示点位 ${v_{i}}$ 与点位 ${v_{j}}$之间的距离。</li>
+<li>向量${d}$ 表示各点位的需求数量。</li>
+<li>${R_{i}}$ 表示载具（vehicle） ${i}$的行驶路径。</li>
+<li>${m}$ 表示载具数量，每条路径对应一台载具。</li>
+</ul>
 <h1 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h1><ul>
 <li><p>分类关注三个方面：</p>
 <ul>
@@ -827,7 +835,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.8k</span>&nbsp;字
+                class="white-color">3.9k</span>&nbsp;字
             
             
             
