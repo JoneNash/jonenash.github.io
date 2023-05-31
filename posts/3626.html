@@ -359,14 +359,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.7k
+                    4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    17 分
                 </div>
                 
 
@@ -410,6 +410,14 @@
 <li>${R_{i}}$ 表示载具（vehicle） ${i}$的行驶路径。</li>
 <li>${m}$ 表示载具数量，每条路径对应一台载具。</li>
 </ul>
+<p>When ${c_{ij} = c_{ji}}$ for all ${(v_{i}, v_{j}) \in A}$ the problem is said to be symmetric and it is then common to replace ${A}$ with the edge set ${E = \left\lbrace(v_{i},v_{j}) | v_{i},v_{j} \in V; i \lt j \right\rbrace}$.</p>
+<p>With each vertex ${v_{i}}$ in ${V’}$ is associated a quantity ${q_{i}}$ of some goods to be delivered by a vehicle. The VRP thus consists of determining a set of ${m}$ vehicle routes of minimal total cost, starting and ending at a depot, such that every vertex in ${V’}$ is visited exactly once by one vehicle.</p>
+<p>For easy computation, it can be defined ${b(V) = \left\lceil \sum_{v_{i} \in V} d_{i}) / C \right\rceil}$, an obvious lower bound on the number of trucks needed to service the customers in set ${V}$.</p>
+<p>We will consider a service time ${\delta_{i}}$ (time needed to unload all goods), required by a vehicle to unload the quantity ${q_{i}}$ at ${v_{i}}$. It is required that the total duration of any vehicle route (travel plus service times) may not surpass a given bound ${D}$, so, in this context the cost ${c_{ij}}$ is taken to be the travel time between the cities. The VRP defined above is NP-hard [Lenstra &amp; Rinnooy Kan 1981].</p>
+<p>A feasible solution is composed of:</p>
+<p>a partition ${R_{1}, … , R_{m}}$ of ${V}$;<br>a permutation ${\sigma_{i}}$ of ${R_{i} \bigcup {0}}$ specifying the order of the customers on route ${i}$.<br>The cost of a given route (${R_{i} = \left\lbrace v_{0}, v_{1}, …, v_{m+1} \right\rbrace}$), where ${v_{i} \in V}$ and ${v_{0} = v_{m+1} = 0}$ (0 denotes the depot), is given by ${C(R_{i}) = \sum_{i=0}^{m} c_{i,i+1} + \sum_{i=1}^{m} \delta_{i}}$.</p>
+<p>A route ${R_{i}}$ is feasible if the vehicle stop exactly once in each customer and the total duration of the route does not exceed a prespecified bound ${D}$: ${C(R_{i}) \leq D}$.</p>
+<p>Finally, the cost of the problem solution ${S}$ is: ${F_{VRP} = \sum_{i=1}^{m} F(R_{i})}$.</p>
 <h1 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h1><ul>
 <li><p>分类关注三个方面：</p>
 <ul>
@@ -835,7 +843,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.9k</span>&nbsp;字
+                class="white-color">4.2k</span>&nbsp;字
             
             
             
