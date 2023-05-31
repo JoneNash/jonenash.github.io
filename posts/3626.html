@@ -366,7 +366,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    16 分
                 </div>
                 
 
@@ -405,16 +405,19 @@
 <li>${V = \left\lbrace v_{0}, v_{1}, …, v_{n} \right\rbrace}$ 表示顶点集合（vertex set）,通常将仓库（depot）看做${v_0}$。</li>
 <li>将 ${V’ = V \backslash \left\lbrace v_{0} \right\rbrace}$ 看做需要访问的点位集合 ${n}$ 。</li>
 <li>${A = \left\lbrace(v_{i},v_{j}) | v_{i},v_{j} \in V; i \neq j \right\rbrace}$ 为边（arc）的集合。</li>
-<li>${C}$ 表示距离矩阵，其中 ${c_{ij}}$ 表示点位 ${v_{i}}$ 与点位 ${v_{j}}$之间的距离。</li>
+<li>${C}$ 表示距离矩阵或时长矩阵，其中 ${c_{ij}}$ 表示点位 ${v_{i}}$ 与点位 ${v_{j}}$之间的距离或时长。</li>
 <li>向量${d}$ 表示各点位的需求数量。</li>
 <li>${R_{i}}$ 表示载具（vehicle） ${i}$的行驶路径。</li>
 <li>${m}$ 表示载具数量，每条路径对应一台载具。</li>
 </ul>
-<p>When ${c_{ij} = c_{ji}}$ for all ${(v_{i}, v_{j}) \in A}$ the problem is said to be symmetric and it is then common to replace ${A}$ with the edge set ${E = \left\lbrace(v_{i},v_{j}) | v_{i},v_{j} \in V; i \lt j \right\rbrace}$.</p>
-<p>With each vertex ${v_{i}}$ in ${V’}$ is associated a quantity ${q_{i}}$ of some goods to be delivered by a vehicle. The VRP thus consists of determining a set of ${m}$ vehicle routes of minimal total cost, starting and ending at a depot, such that every vertex in ${V’}$ is visited exactly once by one vehicle.</p>
-<p>For easy computation, it can be defined ${b(V) = \left\lceil \sum_{v_{i} \in V} d_{i}) / C \right\rceil}$, an obvious lower bound on the number of trucks needed to service the customers in set ${V}$.</p>
-<p>We will consider a service time ${\delta_{i}}$ (time needed to unload all goods), required by a vehicle to unload the quantity ${q_{i}}$ at ${v_{i}}$. It is required that the total duration of any vehicle route (travel plus service times) may not surpass a given bound ${D}$, so, in this context the cost ${c_{ij}}$ is taken to be the travel time between the cities. The VRP defined above is NP-hard [Lenstra &amp; Rinnooy Kan 1981].</p>
-<p>A feasible solution is composed of:</p>
+<p>特殊情况下，当 ${c_{ij} = c_{ji}}$ 时，我们就称该问题是对称的，对应的， ${A}$ 可以由边集合（edge set） ${E = \left\lbrace(v_{i},v_{j}) | v_{i},v_{j} \in V; i \lt j \right\rbrace}$ 替代.</p>
+<p>对于 ${V’}$中的每一个点位 ${v_{i}}$ 而言，都有一个待配送需求量 ${q_{i}}$ 。 The VRP 则m个载具是从仓库出发，满足所有点位的需求，且同一个点位仅被一个载具服务且仅服务一次，最终所有载具并回到仓库。在此基础之上，最小化所有载具的cost。</p>
+<p>在每一次计算中，使用载具数下界可以表示为  ${b(V) = \left\lceil (\sum_{v_{i} \in V} d_{i}) / 车辆最大负荷 \right\rceil}$。</p>
+<p>同时考虑卸载货物的服务时长 ${\delta_{i}}$，则 服务时长与路径行驶时长之和应该小于阈值 ${D}$。</p>
+<p>一个可行解由以下部分组成:</p>
+<ul>
+<li></li>
+</ul>
 <p>a partition ${R_{1}, … , R_{m}}$ of ${V}$;<br>a permutation ${\sigma_{i}}$ of ${R_{i} \bigcup {0}}$ specifying the order of the customers on route ${i}$.<br>The cost of a given route (${R_{i} = \left\lbrace v_{0}, v_{1}, …, v_{m+1} \right\rbrace}$), where ${v_{i} \in V}$ and ${v_{0} = v_{m+1} = 0}$ (0 denotes the depot), is given by ${C(R_{i}) = \sum_{i=0}^{m} c_{i,i+1} + \sum_{i=1}^{m} \delta_{i}}$.</p>
 <p>A route ${R_{i}}$ is feasible if the vehicle stop exactly once in each customer and the total duration of the route does not exceed a prespecified bound ${D}$: ${C(R_{i}) \leq D}$.</p>
 <p>Finally, the cost of the problem solution ${S}$ is: ${F_{VRP} = \sum_{i=1}^{m} F(R_{i})}$.</p>
